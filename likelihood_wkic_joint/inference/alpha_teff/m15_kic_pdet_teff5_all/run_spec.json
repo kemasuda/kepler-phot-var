@@ -1,0 +1,25 @@
+{
+  "alpha_mean_bounds": [
+    -0.2,
+    0.2
+  ],
+  "alpha_mean_prior": "uniform",
+  "alpha_name": "alpha_teff",
+  "flow_id": "m15_kic_pdet_teff5_all",
+  "koi_query": null,
+  "max_tree_depth": 10,
+  "n_grid": 20,
+  "num_chains": 4,
+  "num_samples": 1000,
+  "num_warmup": 1000,
+  "rng_seed": 0,
+  "shift_index": 1,
+  "svi_num_steps": 4000,
+  "svi_seed": 0,
+  "svi_step_size": 0.1,
+  "target_accept_prob": 0.9,
+  "x_index": 0,
+  "x_label": "$T_\\mathrm{eff}$ (K)",
+  "x_name": "Teff",
+  "ylabel": "$r_\\mathrm{KOI}-r_\\mathrm{KIC}$"
+}
