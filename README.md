@@ -48,8 +48,8 @@ construction from the original published catalogs is not included.
 | resampling/resample.py and resampling/resample_given_Teff.ipynb | Section 4 | Perform detectability-weighted matching and resampling. |
 | resampling/resample_given_Teff_plot_dist.ipynb | Sections 2 and 4 | Check the matched distributions and assemble the resampling diagnostics. |
 | likelihood_wkic_joint/train_kic_flow.ipynb | Section 5 | Train the weighted KIC normalizing-flow reference density. |
-| likelihood_wkic_joint/alpha_inference.py and likelihood_wkic_joint/run_alpha_inference.ipynb | Section 5 | Infer the temperature-dependent amplitude shift alpha(Teff). |
-| likelihood_wkic_joint/comparison_alpha_t.ipynb | Section 5 | Assemble the main likelihood-analysis results. |
+| likelihood_wkic_joint/alpha_inference.py and likelihood_wkic_joint/run_alpha_inference_publish.ipynb | Section 5 | Infer the temperature-dependent amplitude shift alpha(Teff). |
+| likelihood_wkic_joint/comparison_alpha_t_publish.ipynb | Section 5 | Assemble the main likelihood-analysis results. |
 
 Shared flow training and diagnostic functions are in likelihood_wkic_common/.
 
