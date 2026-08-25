@@ -1,13 +1,8 @@
 # Kepler photometric-variability comparison
 
-This repository contains a minimal subset of the analysis code used in the
-paper. It is provided primarily to document the implementation of the main
-methods and to make the scientific workflow recoverable, rather than as a
-fully automated end-to-end reproduction pipeline.
+This repository contains a minimal subset of the analysis code used in [Masuda & Dong 2026](). It is provided primarily to document the implementation of the main methods and to make the scientific workflow recoverable, rather than as a fully automated end-to-end reproduction pipeline.
 
-The analysis compares rotational-modulation amplitudes in Kepler Objects of
-Interest (KOIs) with those in a Kepler control sample while accounting for
-planet detectability and differences in stellar properties.
+The analysis compares rotational-modulation amplitudes in Kepler Objects of Interest (KOIs) with those in a Kepler control sample while accounting for planet detectability and differences in stellar properties.
 
 ## Scope
 
@@ -19,9 +14,7 @@ The public analysis subset consists of selected files under:
 - likelihood_wkic_common/
 - likelihood_wkic_joint/
 
-Older analysis directories, validation and Rossby-number runs, the LAMOST
-analysis, large intermediate products, trained models, posterior chains, and
-the manuscript source are not part of this subset.
+The LAMOST analysis, large intermediate products, trained models, posterior chains, and the manuscript source are not part of this subset.
 
 ## Workflow
 
@@ -58,20 +51,15 @@ construction from the original published catalogs is not included.
 | likelihood_wkic_joint/alpha_inference.py and likelihood_wkic_joint/run_alpha_inference.ipynb | Section 5 | Infer the temperature-dependent amplitude shift alpha(Teff). |
 | likelihood_wkic_joint/comparison_alpha_t.ipynb | Section 5 | Assemble the main likelihood-analysis results. |
 
-Shared flow training and diagnostic functions are in
-likelihood_wkic_common/.
+Shared flow training and diagnostic functions are in likelihood_wkic_common/.
 
 ## Detectability calculation
 
-The pdet notebooks use the prepared KIC catalog together with a simulated
-planet population and stellar radii. They write the all-period and
-period-specific KIC tables used by the downstream analyses:
+The pdet notebooks use the prepared KIC catalog together with a simulated planet population and stellar radii. They write the all-period and period-specific KIC tables used by the downstream analyses:
 
 - pdet/m15_kic_w_pdet_TR.csv
 - pdet/m15_kic_w_pdet_TR_p-short.csv
 - pdet/m15_kic_w_pdet_TR_p-long.csv
-
-Run these notebooks from pdet/ so that their relative paths resolve.
 
 ## Resampling analysis
 
@@ -85,8 +73,6 @@ The included outputs are:
 - resampling/plots_dist/resample_corner.png
 - resampling/plots_dist/ecdf_by_teff_logr.png
 - resampling/plots_dist/ecdf_by_teff_kepmag_no-resample.png
-
-Run these notebooks from resampling/.
 
 ## Likelihood analysis
 
@@ -114,16 +100,13 @@ Some notebooks refer to inputs outside the released subset:
 - data/DR2PapTable1.txt
 - data/koi_candidates.csv
 
-The prepared detectability tables allow the later stages to be understood
-without regenerating the full detectability calculation.
+The prepared detectability tables allow the later stages to be understood without regenerating the full detectability calculation.
 
-The detectability and resampling notebooks contain unseeded random draws, so a
-fresh run is not expected to reproduce the checked-in outputs bit for bit.
+The detectability and resampling notebooks contain unseeded random draws, so a fresh run is not expected to reproduce the checked-in outputs bit for bit.
+
 Some plotting cells require a working LaTeX installation.
 
-The likelihood notebooks can be read as records of the implementation, but
-they are not expected to run from start to finish without the omitted trained
-flows and posterior products.
+The likelihood notebooks can be read as records of the implementation, but they are not expected to run from start to finish without the omitted trained flows and posterior products.
 
 ## Software
 
